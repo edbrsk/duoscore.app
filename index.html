@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DuoScore · Compose anywhere you hold it</title>
+    <meta name="description"
+        content="Write guitar, bass and drums, see notation and tab together, hear every note and practise your way. Start from scratch or open the files you already have. Launching on iPhone, iPad and iPhone Duo.">
+    <meta name="theme-color" content="#111318">
+    <meta property="og:title" content="DuoScore · Compose anywhere you hold it">
+    <meta property="og:description"
+        content="Write, play and practise guitar, bass and drums on iPhone, iPad and iPhone Duo. Free for 7 days, then €9.99 once.">
+    <meta property="og:image" content="img/wordmark.jpg?v=6">
+    <link rel="icon" type="image/png" href="img/favicon-64.png?v=4">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=4">
+    <link rel="preload" as="style" href="css/fonts.css?v=1" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/fonts.css?v=1"></noscript>
+    <link rel="stylesheet" href="css/styles.css?v=12">
+    <script type="importmap">
+        {"imports": {"three": "./vendor/three/build/three.module.js", "three/addons/": "./vendor/three/examples/jsm/"}}
+    </script>
+</head>
+
+<body>
+    <header class="ds-nav">
+        <div class="ds-wrap ds-nav__inner">
+            <a class="ds-brand" href="#top">
+                <img src="img/logo-nav.png?v=5" alt="" width="34" height="34">
+                <span><b>Duo</b>Score</span>
+            </a>
+            <nav class="ds-nav__links" aria-label="Sections">
+                <a href="#library">Library</a>
+                <a href="#playback">Playback</a>
+                <a href="#practice">Practice</a>
+                <a href="#editing">Editing</a>
+                <a href="#drums">Drums</a>
+                <a href="#chords">Chords</a>
+                <a href="#sound">Sound</a>
+                <a href="#export">Export</a>
+            </nav>
+            <span class="ds-nav__soon">Coming soon</span>
+        </div>
+    </header>
+
+    <main class="ds-page" id="top">
+
+        <!-- Hero -->
+        <section class="ds-hero">
+            <div class="ds-wrap">
+                <div class="ds-hero__grid">
+                    <div>
+                        
+                        <h1 class="ds-h1">Compose anywhere<br><span class="ds-grad">you hold it.</span></h1>
+                        <p class="ds-lead">
+                            Write guitar, bass and drums on iPhone, iPad and iPhone Duo. See notation and tab together, hear
+                            every note and practise your way. Start a song from scratch, or open the files you already have.
+                        </p>
+                        <div class="ds-cta">
+                            <span class="ds-store" aria-label="Coming soon to the App Store">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                                    <path d="M12 5v14" />
+                                </svg>
+                                <span><small>Coming soon</small>to the App Store</span>
+                            </span>
+                            <a class="ds-tour" href="#library">See what's inside ↓</a>
+                        </div>
+                        <p class="ds-note">Free for 7 days, then €9.99 once. No subscription, no ads, no account.</p>
+                        
+                    </div>
+                    <div class="ds-hero__visual">
+                        <div class="ds-fold" data-fold-viewport role="img"
+                            aria-label="DuoScore on iPhone Duo, unfolding to show notation over tab">
+                            <div class="ds-fold__fallback">
+                                <div class="ds-device">
+                                    <div class="ds-shot" style="--ratio: 1.42">
+                                        <picture>
+                                            <img src="screens/web/open-1600.jpg" srcset="screens/web/open-800.jpg 800w, screens/web/open-1600.jpg 1600w" sizes="(min-width: 1024px) 680px, 100vw"
+                                                width="1600" height="1125" alt="" fetchpriority="high" decoding="async"
+                                                onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                                        </picture>
+                                        <div class="ds-shot__empty" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24">
+                                                <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                                <path d="M12 4v16" />
+                                                <circle cx="7.5" cy="9" r="1.5" />
+                                                <path d="M3 17l4.5-4 3 2.5" />
+                                            </svg>
+                                            <span class="ds-shot__label">Open · inner screen</span>
+                                            <code class="ds-shot__path">screens/open.png</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="ds-fold__toggle" data-fold-toggle aria-label="Fold the phone" hidden>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                                <path d="M12 5v14" />
+                            </svg>
+                            <span data-fold-label>Fold</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-tabband" aria-hidden="true">
+                <svg data-tabband preserveAspectRatio="xMinYMid slice" viewBox="0 0 1600 132"></svg>
+                <div class="ds-cursor"></div>
+            </div>
+        </section>
+
+        <!-- Library -->
+        <section class="ds-section ds-night" id="library">
+            <div class="ds-wrap ds-split">
+                <div>
+                    <div class="ds-mark">Your library</div>
+                    <h2 class="ds-h2">Every song you're learning or writing, in one place.</h2>
+                    <p class="ds-lead">
+                        Start a song from scratch, or import Guitar Pro and MusicXML files from Files or straight from the share sheet. Each song shows
+                        its tuning and string count at a glance. New to DuoScore? A one-minute tour writes your first riff with you.
+                    </p>
+                    
+                    <div class="ds-songs" aria-hidden="true">
+                        <div class="ds-song">
+                            <span class="ds-song__name">Midnight Etude<small>midnight-etude.gp</small></span>
+                            <span class="ds-song__tags"><span class="ds-chip">E standard</span><span class="ds-chip">6
+                                    strings</span></span>
+                        </div>
+                        <div class="ds-song">
+                            <span class="ds-song__name">Low Tide Riff<small>low-tide.gp5</small></span>
+                            <span class="ds-song__tags"><span class="ds-chip">Drop A</span><span class="ds-chip">7
+                                    strings</span></span>
+                        </div>
+                        <div class="ds-song">
+                            <span class="ds-song__name">Open Road<small>open-road.musicxml</small></span>
+                            <span class="ds-song__tags"><span class="ds-chip">Eb standard</span><span class="ds-chip">6
+                                    strings</span></span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="ds-device">
+                    <div class="ds-shot" style="--ratio: 1.22">
+                        <picture>
+                            <img src="screens/web/library-1600.jpg" srcset="screens/web/library-800.jpg 800w, screens/web/library-1600.jpg 1600w" sizes="(min-width: 1024px) 680px, 100vw"
+                                width="1600" height="1125" alt="The DuoScore library" loading="lazy" decoding="async"
+                                onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                        </picture>
+                        <div class="ds-shot__empty" role="img" aria-label="The DuoScore library">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                <path d="M12 4v16" />
+                                <circle cx="7.5" cy="9" r="1.5" />
+                                <path d="M3 17l4.5-4 3 2.5" />
+                            </svg>
+                            <span class="ds-shot__label">Library</span>
+                            <code class="ds-shot__path">screens/library.png</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notation and tab -->
+        <section class="ds-section ds-light">
+            <div class="ds-wrap">
+                <div class="ds-split">
+                    <div>
+                        <div class="ds-mark">Notation &amp; tab</div>
+                        <h2 class="ds-h2">Notes on top. Frets below. Room for both.</h2>
+                        <p class="ds-lead">
+                            Standard notation over tablature, laid out to use every inch of the screen, so you read more of the
+                            song and turn fewer pages. Each track can show standard notation, tab, slash or numbered notation, in any mix. Notation or tab always stays on.
+                        </p>
+                    </div>
+                    <figure class="ds-score" style="margin:0">
+                        <div class="ds-score__bar">
+                            <span class="ds-score__track">Track 1 · Lead guitar</span>
+                            <div class="ds-score__views" data-views role="group" aria-label="Track views">
+                                <span class="ds-score__views-label" aria-hidden="true">Show</span>
+                                <button type="button" class="ds-view-chip" data-view-btn="notation" aria-pressed="true">
+                                    <span class="ds-view-chip__check" aria-hidden="true">
+                                        <svg viewBox="0 0 12 12"><path d="M2.2 6.2L4.8 8.8L9.8 3.4" /></svg>
+                                    </span>
+                                    <span>Notation</span>
+                                </button>
+                                <button type="button" class="ds-view-chip" data-view-btn="tab" aria-pressed="true">
+                                    <span class="ds-view-chip__check" aria-hidden="true">
+                                        <svg viewBox="0 0 12 12"><path d="M2.2 6.2L4.8 8.8L9.8 3.4" /></svg>
+                                    </span>
+                                    <span>Tab</span>
+                                </button>
+                            </div>
+                        </div>
+                        <svg viewBox="0 0 640 216" role="img"
+                            aria-label="Two bars of music shown as standard notation above guitar tablature">
+                            <g class="staff" data-row="notation" data-top="24" data-h="84">
+                                <line x1="20" y1="40" x2="610" y2="40" />
+                                <line x1="20" y1="52" x2="610" y2="52" />
+                                <line x1="20" y1="64" x2="610" y2="64" />
+                                <line x1="20" y1="76" x2="610" y2="76" />
+                                <line x1="20" y1="88" x2="610" y2="88" />
+                                <text class="clef" x="24" y="94">𝄞</text>
+                                <text class="tsig" x="76" y="59">4</text>
+                                <text class="tsig" x="76" y="83">4</text>
+                                <line class="bar" x1="330" y1="40" x2="330" y2="88" />
+                                <line class="bar" x1="610" y1="40" x2="610" y2="88" />
+                                <!-- A4 up, B4 down, D5 down, E5 down | G5, E5, D5, B4 down -->
+                                <ellipse class="head" cx="120" cy="70" rx="6.6" ry="4.6" transform="rotate(-20 120 70)" />
+                                <line class="stem" x1="126" y1="69" x2="126" y2="36" />
+                                <ellipse class="head" cx="180" cy="64" rx="6.6" ry="4.6" transform="rotate(-20 180 64)" />
+                                <line class="stem" x1="174" y1="65" x2="174" y2="98" />
+                                <ellipse class="head" cx="240" cy="52" rx="6.6" ry="4.6" transform="rotate(-20 240 52)" />
+                                <line class="stem" x1="234" y1="53" x2="234" y2="86" />
+                                <ellipse class="head" cx="300" cy="46" rx="6.6" ry="4.6" transform="rotate(-20 300 46)" />
+                                <line class="stem" x1="294" y1="47" x2="294" y2="80" />
+                                <ellipse class="head" cx="380" cy="34" rx="6.6" ry="4.6" transform="rotate(-20 380 34)" />
+                                <line class="stem" x1="374" y1="35" x2="374" y2="68" />
+                                <ellipse class="head" cx="440" cy="46" rx="6.6" ry="4.6" transform="rotate(-20 440 46)" />
+                                <line class="stem" x1="434" y1="47" x2="434" y2="80" />
+                                <ellipse class="head" cx="500" cy="52" rx="6.6" ry="4.6" transform="rotate(-20 500 52)" />
+                                <line class="stem" x1="494" y1="53" x2="494" y2="86" />
+                                <ellipse class="head" cx="560" cy="64" rx="6.6" ry="4.6" transform="rotate(-20 560 64)" />
+                                <line class="stem" x1="554" y1="65" x2="554" y2="98" />
+                            </g>
+                            <g class="tab" data-row="tab" data-top="128" data-h="84">
+                                <line x1="20" y1="140" x2="610" y2="140" />
+                                <line x1="20" y1="152" x2="610" y2="152" />
+                                <line x1="20" y1="164" x2="610" y2="164" />
+                                <line x1="20" y1="176" x2="610" y2="176" />
+                                <line x1="20" y1="188" x2="610" y2="188" />
+                                <line x1="20" y1="200" x2="610" y2="200" />
+                                <text class="tablabel" x="42" y="157">T</text>
+                                <text class="tablabel" x="42" y="174">A</text>
+                                <text class="tablabel" x="42" y="191">B</text>
+                                <line class="bar" x1="330" y1="140" x2="330" y2="200" />
+                                <line class="bar" x1="610" y1="140" x2="610" y2="200" />
+                                <text class="fret" x="120" y="164">2</text>
+                                <text class="fret" x="180" y="164">4</text>
+                                <text class="fret" x="240" y="152">3</text>
+                                <text class="fret" x="300" y="152">5</text>
+                                <text class="fret" x="380" y="140">3</text>
+                                <text class="fret" x="440" y="152">5</text>
+                                <text class="fret" x="500" y="152">3</text>
+                                <text class="fret" x="560" y="164">4</text>
+                            </g>
+                            <rect class="playhead" x="100" y="24" width="3" height="182" rx="1.5" />
+                        </svg>
+                    </figure>
+                </div>
+                <div class="ds-wide">
+                    <div class="ds-device">
+                        <div class="ds-shot" style="--ratio: 1.6">
+                            <picture>
+                                <img src="screens/web/notation-1600.jpg" srcset="screens/web/notation-800.jpg 800w, screens/web/notation-1600.jpg 1600w" sizes="(min-width: 1180px) 1140px, 100vw"
+                                    width="1600" height="1125" alt="Notation over tab across the screen" loading="lazy" decoding="async"
+                                    onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                            </picture>
+                            <div class="ds-shot__empty" role="img" aria-label="Notation over tab across the screen">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                    <path d="M12 4v16" />
+                                    <circle cx="7.5" cy="9" r="1.5" />
+                                    <path d="M3 17l4.5-4 3 2.5" />
+                                </svg>
+                                <span class="ds-shot__label">Score view · notation over tab</span>
+                                <code class="ds-shot__path">screens/notation.png</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Playback -->
+        <section class="ds-section" id="playback">
+            <div class="ds-wrap ds-split ds-split--flip">
+                <div>
+                    <div class="ds-mark">Playback</div>
+                    <h2 class="ds-h2">Hear it the way it's written.</h2>
+                    <p class="ds-lead">
+                        Bends, slides, vibrato, whammy dives and tremolo picking sound the way a guitarist plays them:
+                        smooth and expressive, never stepped.
+                    </p>
+                    <div class="ds-techs">
+                        <div class="ds-tech">
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M4 26h9c6 0 9-5 9-16" />
+                                <path d="M18 13l4-5 4 5" />
+                            </svg>
+                            <span>Bends</span>
+                        </div>
+                        <div class="ds-tech">
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M3 10h7l6 14 6-14h7" />
+                            </svg>
+                            <span>Whammy dives</span>
+                        </div>
+                        <div class="ds-tech">
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M5 24L27 8" />
+                                <circle cx="5" cy="24" r="2.5" />
+                                <circle cx="27" cy="8" r="2.5" />
+                            </svg>
+                            <span>Slides</span>
+                        </div>
+                        <div class="ds-tech">
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M2 16c2.3-5 4.7-5 7 0s4.7 5 7 0 4.7-5 7 0 4.7 5 7 0" />
+                            </svg>
+                            <span>Vibrato</span>
+                        </div>
+                        <div class="ds-tech">
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M16 3v26" />
+                                <path d="M10 11l12-4M10 17l12-4M10 23l12-4" />
+                            </svg>
+                            <span>Tremolo picking</span>
+                        </div>
+                    </div>
+                    <p class="ds-note">Every technique was tuned by ear. Bends reach the note quickly and hold it, and vibrato
+                        pushes the note upward.</p>
+                    
+                </div>
+                <div class="ds-device">
+                    <div class="ds-shot" style="--ratio: 1.22">
+                        <picture>
+                            <img src="screens/web/playback-1600.jpg" srcset="screens/web/playback-800.jpg 800w, screens/web/playback-1600.jpg 1600w" sizes="(min-width: 1024px) 680px, 100vw"
+                                width="1600" height="1125" alt="Playback with the cursor following the score" loading="lazy" decoding="async"
+                                onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                        </picture>
+                        <div class="ds-shot__empty" role="img" aria-label="Playback with the cursor following the score">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                <path d="M12 4v16" />
+                                <circle cx="7.5" cy="9" r="1.5" />
+                                <path d="M3 17l4.5-4 3 2.5" />
+                            </svg>
+                            <span class="ds-shot__label">Playback · cursor following the music</span>
+                            <code class="ds-shot__path">screens/playback.png</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice -->
+        <section class="ds-section ds-deep" id="practice">
+            <div class="ds-wrap">
+                <div class="ds-split">
+                    <div>
+                        <div class="ds-mark">Practice tools</div>
+                        <h2 class="ds-h2">Slow it down. Loop the hard part. <span class="ds-grad">Get it.</span></h2>
+                        <p class="ds-lead">
+                            Everything you need to work through a passage, and none of it touches your file.
+                        </p>
+                    </div>
+                    <div class="ds-device">
+                        <div class="ds-shot" style="--ratio: 1.22">
+                            <picture>
+                                <img src="screens/web/practice-1600.jpg" srcset="screens/web/practice-800.jpg 800w, screens/web/practice-1600.jpg 1600w" sizes="(min-width: 1024px) 680px, 100vw"
+                                    width="1600" height="1125" alt="Practice controls open beside the score" loading="lazy" decoding="async"
+                                    onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                            </picture>
+                            <div class="ds-shot__empty" role="img" aria-label="Practice controls open beside the score">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                    <path d="M12 4v16" />
+                                    <circle cx="7.5" cy="9" r="1.5" />
+                                    <path d="M3 17l4.5-4 3 2.5" />
+                                </svg>
+                                <span class="ds-shot__label">Practice · speed, loop and mixer</span>
+                                <code class="ds-shot__path">screens/practice.png</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-console">
+                    <div class="ds-card ds-card--3">
+                        <div class="ds-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 19a9 9 0 1 1 18 0" />
+                                <path d="M12 19l5-7" />
+                            </svg></div>
+                        <h3 class="ds-h3">Speed</h3>
+                        <p>Play anywhere from 25% to 150% of the written tempo, with one-tap shortcuts for the speeds you
+                            use most.</p>
+                        <div class="ds-exports">
+                            <span class="ds-chip">25% – 150%</span>
+                            <span class="ds-chip">50%</span>
+                            <span class="ds-chip">75%</span>
+                            <span class="ds-chip">100%</span>
+                        </div>
+                    </div>
+                    <div class="ds-card ds-card--3">
+                        <div class="ds-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M17 3l3 3-3 3" />
+                                <path d="M4 12V9a3 3 0 0 1 3-3h13" />
+                                <path d="M7 21l-3-3 3-3" />
+                                <path d="M20 12v3a3 3 0 0 1-3 3H4" />
+                            </svg></div>
+                        <h3 class="ds-h3">Loop any passage</h3>
+                        <p>Select the bars you're stuck on and they repeat until you've got them.</p>
+                    </div>
+                    <div class="ds-card ds-card--2">
+                        <div class="ds-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 3h6l4 18H5z" />
+                                <path d="M12 16l5-9" />
+                            </svg></div>
+                        <h3 class="ds-h3">Count-in &amp; metronome</h3>
+                        <p>Get a count-in before the music starts and a click to keep time with, at the volume you want.</p>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Metronome volume</span>
+                        </div>
+                    </div>
+                    <div class="ds-card ds-card--4">
+                        <div class="ds-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 4v16M12 4v16M18 4v16" />
+                                <path d="M4 14h4M10 8h4M16 12h4" />
+                            </svg></div>
+                        <h3 class="ds-h3">Mixer</h3>
+                        <p>Mute, solo and balance every track, then play your part over the rest of the band.</p>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Faders in dB</span>
+                            <span class="ds-chip">Live level meters</span>
+                            <span class="ds-chip">Pan</span>
+                            <span class="ds-chip">Master fader</span>
+                            <span class="ds-chip">Mute &amp; solo</span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Editing -->
+        <section class="ds-section ds-light" id="editing">
+            <div class="ds-wrap">
+                <div class="ds-split ds-split--flip">
+                    <div>
+                        <div class="ds-mark">Editing</div>
+                        <h2 class="ds-h2">Fix that wrong note. Right where you found it.</h2>
+                        <p class="ds-lead">
+                            Write and change notes with an on-screen palette. Undo and redo as much as you like. Every
+                            change saves automatically, and plays the beat you're editing so you hear what you write.
+                        </p>
+                        <div class="ds-palette" aria-hidden="true">
+                            <span class="is-on">♩</span>
+                            <span>♪</span>
+                            <span>♫</span>
+                            <span>♬</span>
+                            <span class="ds-palette__sep"></span>
+                            <span>7</span>
+                            <span><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5" /><path d="M4 9h10a6 6 0 0 1 0 12h-3" /></svg></span>
+                            <span><svg viewBox="0 0 24 24"><path d="M15 14l5-5-5-5" /><path d="M20 9H10a6 6 0 0 0 0 12h3" /></svg></span>
+                            <span class="ds-palette__saved">● Saved</span>
+                        </div>
+                    </div>
+                    <div class="ds-device">
+                        <div class="ds-shot" style="--ratio: 1.22">
+                            <picture>
+                                <img src="screens/web/editing-1600.jpg" srcset="screens/web/editing-800.jpg 800w, screens/web/editing-1600.jpg 1600w" sizes="(min-width: 1024px) 680px, 100vw"
+                                    width="1600" height="1125" alt="Editing notes with the on-screen palette" loading="lazy" decoding="async"
+                                    onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                            </picture>
+                            <div class="ds-shot__empty" role="img" aria-label="Editing notes with the on-screen palette">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                    <path d="M12 4v16" />
+                                    <circle cx="7.5" cy="9" r="1.5" />
+                                    <path d="M3 17l4.5-4 3 2.5" />
+                                </svg>
+                                <span class="ds-shot__label">Editing · note palette</span>
+                                <code class="ds-shot__path">screens/editing.png</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ds-cols">
+                    <div class="ds-col">
+                        <span class="ds-num">01 · Notes</span>
+                        <h3 class="ds-h3">Write and rewrite</h3>
+                        <p>Enter and change notes from the palette, with undo, redo and automatic saving. Each change plays the
+                            beat you're editing. Select a whole chord with one tap, and copy and paste a beat.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">02 · Tracks</span>
+                        <h3 class="ds-h3">Shape the band</h3>
+                        <p>Add, remove, reorder and rename tracks. New songs start from instrument cards: guitar, bass or
+                            drums.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">03 · Structure</span>
+                        <h3 class="ds-h3">Bars and repeats</h3>
+                        <p>Edit bars, time signatures and repeats, plus the song's title and artist.</p>
+                    </div>
+                    <div class="ds-col ds-col--wide">
+                        <span class="ds-num">04 · Techniques</span>
+                        <h3 class="ds-h3">Every guitar technique</h3>
+                        <p>Each in its variants, written from the palette.</p>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Bends</span>
+                            <span class="ds-chip">Slides</span>
+                            <span class="ds-chip">Vibrato</span>
+                            <span class="ds-chip">Harmonics</span>
+                            <span class="ds-chip">Tremolo picking</span>
+                            <span class="ds-chip">Grace notes</span>
+                            <span class="ds-chip">Tremolo bar</span>
+                            <span class="ds-chip">Brush</span>
+                            <span class="ds-chip">Rasgueado</span>
+                            <span class="ds-chip">Slap &amp; pop</span>
+                            <span class="ds-chip">Tapping</span>
+                            <span class="ds-chip">Trills</span>
+                            <span class="ds-chip">Fades</span>
+                            <span class="ds-chip">Wah</span>
+                            <span class="ds-chip">Sustain pedal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Drums -->
+        <section class="ds-section ds-night" id="drums">
+            <div class="ds-wrap">
+                <div class="ds-mark">Drums</div>
+                <h2 class="ds-h2">A piano roll for the kit. <span class="ds-grad">Paint it in.</span></h2>
+                <p class="ds-lead">
+                    Paint drum parts with your finger on a grid with one row per kit piece, then hear every hit as you
+                    place it. The sheet shows them in standard drum notation.
+                </p>
+
+                <div class="ds-roll" data-roll role="img"
+                    aria-label="A drum pattern in the piano roll: a crash on beat 1, hi-hats on every eighth, snare on 2 and 4, and kicks on 1, the and of 2, 3 and the and of 3">
+                    <div class="ds-roll__top">
+                        <span class="ds-roll__title">Pattern · Power kit · 1/16 grid</span>
+                    </div>
+                    <div class="ds-roll__grid" data-roll-grid></div>
+                    <div class="ds-roll__vel" data-roll-vel aria-hidden="true"></div>
+                </div>
+
+                <div class="ds-cols ds-cols--dark ds-cols--4">
+                    <div class="ds-col">
+                        <span class="ds-num">01 · Grid</span>
+                        <h3 class="ds-h3">One row per piece</h3>
+                        <p>Kick, snare, toms, hi-hats, ride, crashes, splash, china and rim, on a 1/8, 1/16, 1/24
+                            (triplet) or 1/32 grid.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">02 · Writing</span>
+                        <h3 class="ds-h3">Paint, select, erase</h3>
+                        <p>Paint with a finger, select, erase, copy and paste, and add a Flam.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">03 · Feel</span>
+                        <h3 class="ds-h3">Velocity and timing</h3>
+                        <p>A velocity lane for every hit, and timing off the grid for a human feel. Quantize strength runs
+                            from 0 to 100%, plus a Q button.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">04 · Moving</span>
+                        <h3 class="ds-h3">Notes follow your finger</h3>
+                        <p>Drag notes and they follow your finger. Overlap them freely.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">05 · Navigation</span>
+                        <h3 class="ds-h3">Scroll and zoom</h3>
+                        <p>Scroll and zoom with two fingers. Tap the ruler to move the song cursor anywhere, or drag the
+                            playhead.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">06 · Sound &amp; sheet</span>
+                        <h3 class="ds-h3">Hear it, read it</h3>
+                        <p>Hits play as you paint them, and the sheet shows them in standard drum notation.</p>
+                    </div>
+                    <div class="ds-col ds-col--span2">
+                        <span class="ds-num">07 · Kits</span>
+                        <h3 class="ds-h3">11 kits, Power by default</h3>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Standard</span>
+                            <span class="ds-chip">Room</span>
+                            <span class="ds-chip">Power</span>
+                            <span class="ds-chip">Electronic</span>
+                            <span class="ds-chip">808/909</span>
+                            <span class="ds-chip">Dance</span>
+                            <span class="ds-chip">Jazz</span>
+                            <span class="ds-chip">Brush</span>
+                            <span class="ds-chip">Orchestral</span>
+                            <span class="ds-chip">and more</span>
+                        </div>
+                    </div>
+                    <div class="ds-col ds-col--wide">
+                        <span class="ds-num">08 · Logic</span>
+                        <h3 class="ds-h3">MIDI drums, both ways</h3>
+                        <p>Send a drum part to Logic as MIDI, or bring one in with a preview first, on the Modern &amp;
+                            Massive 2 or General MIDI map.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bass -->
+        <section class="ds-section ds-light" id="bass">
+            <div class="ds-wrap ds-split">
+                <div>
+                    <div class="ds-mark">Bass</div>
+                    <h2 class="ds-h2">Low end, written properly.</h2>
+                    <p class="ds-lead">
+                        Bass tracks get their own tunings, clef, sounds and chord shapes, not a guitar in disguise.
+                    </p>
+                    <div class="ds-instruments">
+                        <span class="ds-chip">4 strings</span>
+                        <span class="ds-chip">5 strings</span>
+                        <span class="ds-chip">6 strings</span>
+                        <span class="ds-chip">Bass tunings</span>
+                        <span class="ds-chip">Bass clef</span>
+                        <span class="ds-chip">8 bass sounds</span>
+                        <span class="ds-chip">Power chords</span>
+                        <span class="ds-chip">Tenths</span>
+                    </div>
+                </div>
+                <figure class="ds-score ds-bass" style="margin:0">
+                    <svg viewBox="0 0 640 170" role="img" aria-label="A bass line in bass clef above four-string bass tab">
+                        <g class="staff">
+                            <line x1="20" y1="20" x2="610" y2="20" /><line x1="20" y1="32" x2="610" y2="32" />
+                            <line x1="20" y1="44" x2="610" y2="44" /><line x1="20" y1="56" x2="610" y2="56" />
+                            <line x1="20" y1="68" x2="610" y2="68" />
+                            <text class="clef" x="26" y="58">𝄢</text>
+                            <ellipse class="head" cx="150" cy="68" rx="6.6" ry="4.6" transform="rotate(-20 150 68)" />
+                            <line class="stem" x1="156" y1="67" x2="156" y2="34" />
+                            <ellipse class="head" cx="260" cy="56" rx="6.6" ry="4.6" transform="rotate(-20 260 56)" />
+                            <line class="stem" x1="266" y1="55" x2="266" y2="22" />
+                            <ellipse class="head" cx="370" cy="68" rx="6.6" ry="4.6" transform="rotate(-20 370 68)" />
+                            <line class="stem" x1="376" y1="67" x2="376" y2="34" />
+                            <ellipse class="head" cx="480" cy="44" rx="6.6" ry="4.6" transform="rotate(-20 480 44)" />
+                            <line class="stem" x1="486" y1="43" x2="486" y2="10" />
+                        </g>
+                        <g class="tab">
+                            <line x1="20" y1="104" x2="610" y2="104" /><line x1="20" y1="120" x2="610" y2="120" />
+                            <line x1="20" y1="136" x2="610" y2="136" /><line x1="20" y1="152" x2="610" y2="152" />
+                            <text class="tablabel" x="44" y="124">T</text><text class="tablabel" x="44" y="140">A</text>
+                            <text class="tablabel" x="44" y="156">B</text>
+                            <text class="fret" x="150" y="152">0</text>
+                            <text class="fret" x="260" y="136">2</text>
+                            <text class="fret" x="370" y="152">0</text>
+                            <text class="fret" x="480" y="120">2</text>
+                        </g>
+                    </svg>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Chords -->
+        <section class="ds-section ds-deep" id="chords">
+            <div class="ds-wrap">
+                <div class="ds-mark">Chords</div>
+                <h2 class="ds-h2">Name it, find it, <span class="ds-grad">play it.</span></h2>
+                <p class="ds-lead">
+                    Build chord symbols with a few taps, then get playable positions for the track's tuning, on guitars
+                    with 7 or 8 strings too.
+                </p>
+
+                <div class="ds-chordbuilder" data-chords>
+                    <div class="ds-chordbuilder__symbol" data-chord-symbol aria-live="polite">Am7</div>
+                    <div class="ds-chordbuilder__rows">
+                        <div class="ds-chordbuilder__row" data-chord-group="root"><span>Root</span><div></div></div>
+                        <div class="ds-chordbuilder__row" data-chord-group="type"><span>Type</span><div></div></div>
+                    </div>
+                    <div class="ds-chordpos" data-chord-pos aria-live="polite"></div>
+                </div>
+
+                <div class="ds-cols ds-cols--dark">
+                    <div class="ds-col">
+                        <span class="ds-num">01 · Building</span>
+                        <h3 class="ds-h3">Tap it together</h3>
+                        <p>Root, type, additions and slash bass: tap each to build the symbol.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">02 · Positions</span>
+                        <h3 class="ds-h3">Up to four per region</h3>
+                        <p>Get up to four playable positions per region of the neck for the track's tuning, including guitars with 7 or 8 strings.</p>
+                    </div>
+                    <div class="ds-col">
+                        <span class="ds-num">03 · Naming</span>
+                        <h3 class="ds-h3">Named as you write</h3>
+                        <p>Chords are named as you write, the way a chord finder does, or suggested for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound -->
+        <section class="ds-section ds-night" id="sound">
+            <div class="ds-wrap ds-sound">
+                <div>
+                    <div class="ds-mark">Sound</div>
+                    <h2 class="ds-h2">A full band in your pocket.</h2>
+                    <p class="ds-lead">
+                        Every track has its own base sound plus effects, on top of a carefully calibrated mix. Drums and bass included.
+                    </p>
+                    <div class="ds-instruments">
+                        <span class="ds-chip">Base sound + effects</span>
+                        <span class="ds-chip">Room, compressor, limiter</span>
+                        <span class="ds-chip">Sounds kept in your files</span>
+                        <span class="ds-chip">11 drum kits</span>
+                        <span class="ds-chip">8 bass sounds</span>
+                    </div>
+                </div>
+                <div class="ds-eq" aria-hidden="true">
+                    <span style="--d:.1"></span><span style="--d:.9"></span><span style="--d:.4"></span>
+                    <span style="--d:1.3"></span><span style="--d:.2"></span><span style="--d:.7"></span>
+                    <span style="--d:1.1"></span><span style="--d:.5"></span><span style="--d:1.5"></span>
+                    <span style="--d:.3"></span><span style="--d:.8"></span><span style="--d:1.2"></span>
+                    <span style="--d:.6"></span><span style="--d:1.4"></span><span style="--d:0"></span>
+                    <span style="--d:1"></span><span style="--d:.35"></span><span style="--d:.75"></span>
+                    <span style="--d:1.25"></span><span style="--d:.15"></span>
+                </div>
+            </div>
+            <div class="ds-wrap">
+                <div class="ds-console">
+                    <div class="ds-card ds-card--3">
+                        <h3 class="ds-h3">Base sounds</h3>
+                        <p>Each track has one, plus effects.</p>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Clean</span>
+                            <span class="ds-chip">Low gain</span>
+                            <span class="ds-chip">Overdrive</span>
+                            <span class="ds-chip">High gain</span>
+                            <span class="ds-chip">Lead</span>
+                            <span class="ds-chip">Acoustic</span>
+                            <span class="ds-chip">Nylon</span>
+                            <span class="ds-chip">Synth lead</span>
+                            <span class="ds-chip">Synth pad</span>
+                            <span class="ds-chip">+ 8 bass sounds</span>
+                        </div>
+                    </div>
+                    <div class="ds-card ds-card--3">
+                        <h3 class="ds-h3">Mix</h3>
+                        <p>A room, compressor and limiter on the master. The overall sound was calibrated against reference
+                            exports of seven songs.</p>
+                    </div>
+                    <div class="ds-card ds-card--3">
+                        <h3 class="ds-h3">Sounds travel with the song</h3>
+                        <p>Sounds stored in .gp files are read, played where the song switches them, and saved back.</p>
+                    </div>
+                    <div class="ds-card ds-card--3">
+                        <h3 class="ds-h3">Drums</h3>
+                        <p>11 drum kits to choose from.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound changes -->
+        <section class="ds-section ds-light">
+            <div class="ds-wrap">
+                <div class="ds-mark">Sound changes</div>
+                <h2 class="ds-h2">Change the tone mid-song.</h2>
+                <p class="ds-lead">
+                    Switch a track's sound at any bar. Build a sound from a base and effects, and see
+                    every switch as a ▾ mark in the track list.
+                </p>
+                <div class="ds-timeline" aria-label="Example track list with sound changes marked at bars 1, 5 and 7">
+                    <div class="ds-timeline__row">
+                        <span class="ds-timeline__name">Rhythm guitar</span>
+                        <div class="ds-timeline__bars">
+                            <span><i>▾</i><small>Clean</small></span><span></span><span></span><span></span>
+                            <span><i>▾</i><small>High gain</small></span><span></span>
+                            <span><i>▾</i><small>Clean</small></span><span></span>
+                        </div>
+                    </div>
+                    <div class="ds-timeline__row">
+                        <span class="ds-timeline__name">Lead guitar</span>
+                        <div class="ds-timeline__bars">
+                            <span><i>▾</i><small>Lead</small></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ds-instruments">
+                    <span class="ds-chip">Base</span>
+                    <span class="ds-chip">+ Effects</span>
+                    <span class="ds-chip">Switch at any bar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retuning -->
+        <section class="ds-section ds-deep">
+            <div class="ds-wrap">
+                <div class="ds-mark">Retuning</div>
+                <h2 class="ds-h2">New tuning? <span class="ds-grad">You choose what stays.</span></h2>
+                <p class="ds-lead">
+                    Change a track's tuning or string count, from Eb to E standard or from 6 to 7 strings. Keep the
+                    sound and the notes move to new frets. Keep the frets and the shapes you play stay the same. Notes
+                    that can't be played are flagged. It works for bass too, and for guitars with 7 or 8 strings.
+                </p>
+                <div class="ds-instruments">
+                    <span class="ds-chip">Guitar · 6, 7, 8 strings</span>
+                    <span class="ds-chip">Bass · 4, 5, 6 strings</span>
+                </div>
+
+                <div class="ds-retune" data-retune>
+                    <div class="ds-retune__top">
+                        <div class="ds-tuning">
+                            <span>Eb standard</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 12h16M14 6l6 6-6 6" />
+                            </svg>
+                            <span>E standard</span>
+                        </div>
+                        <div class="ds-seg ds-seg--dark" role="group" aria-label="Retune mode">
+                            <button type="button" data-mode="sound" aria-pressed="true">Keep the sound</button>
+                            <button type="button" data-mode="frets" aria-pressed="false">Keep the frets</button>
+                        </div>
+                    </div>
+                    <div class="ds-tabs">
+                        <div class="ds-tabpanel">
+                            <h3>Before · Eb standard</h3>
+                            <div class="ds-tabgrid" data-tab="before"></div>
+                            <div class="ds-pitches" data-pitch="before"></div>
+                        </div>
+                        <div class="ds-tabpanel">
+                            <h3>After · E standard</h3>
+                            <div class="ds-tabgrid" data-tab="after"></div>
+                            <div class="ds-pitches" data-pitch="after"></div>
+                        </div>
+                    </div>
+                    <div class="ds-retune__note">
+                        <span data-retune-summary aria-live="polite"></span>
+                        <span class="ds-flag-key"><i></i>Can't be played in the new tuning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart fingering and export -->
+        <section class="ds-section ds-light-2" id="export">
+            <div class="ds-wrap ds-duo-cards">
+                <article class="ds-panel">
+                    <div class="ds-mark">Smart fingering</div>
+                    <h2 class="ds-h2">MusicXML without tab? It gets frets.</h2>
+                    <p class="ds-lead">
+                        Parts that arrive as notation only get strings and frets assigned automatically, in comfortable
+                        positions on the neck.
+                    </p>
+                    <div class="ds-panel__art ds-finger">
+                        <svg viewBox="0 0 520 290" role="img"
+                            aria-label="Four notes on a staff mapped to fret positions on a guitar neck">
+                            <g stroke="#2B3040" stroke-width="1">
+                                <line x1="10" y1="60" x2="150" y2="60" />
+                                <line x1="10" y1="72" x2="150" y2="72" />
+                                <line x1="10" y1="84" x2="150" y2="84" />
+                                <line x1="10" y1="96" x2="150" y2="96" />
+                                <line x1="10" y1="108" x2="150" y2="108" />
+                            </g>
+                            <g fill="#171C2B">
+                                <ellipse cx="38" cy="90" rx="6.4" ry="4.4" transform="rotate(-20 38 90)" />
+                                <ellipse cx="68" cy="84" rx="6.4" ry="4.4" transform="rotate(-20 68 84)" />
+                                <ellipse cx="98" cy="72" rx="6.4" ry="4.4" transform="rotate(-20 98 72)" />
+                                <ellipse cx="128" cy="66" rx="6.4" ry="4.4" transform="rotate(-20 128 66)" />
+                            </g>
+                            <path d="M168 84h40m-10-8l10 8-10 8" fill="none" stroke="#1B2140" stroke-width="2.4"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="232" y="28" width="276" height="122" rx="10" fill="#171C2B" />
+                            <rect x="300" y="28" width="138" height="122" fill="#B2C5FF" opacity=".14" />
+                            <g stroke="#3C4252" stroke-width="2">
+                                <line x1="300" y1="34" x2="300" y2="144" />
+                                <line x1="346" y1="34" x2="346" y2="144" />
+                                <line x1="392" y1="34" x2="392" y2="144" />
+                                <line x1="438" y1="34" x2="438" y2="144" />
+                                <line x1="484" y1="34" x2="484" y2="144" />
+                                <line x1="254" y1="34" x2="254" y2="144" />
+                            </g>
+                            <g stroke="#C4C6D0" stroke-width="1.2" opacity=".7">
+                                <line x1="240" y1="44" x2="500" y2="44" />
+                                <line x1="240" y1="64" x2="500" y2="64" />
+                                <line x1="240" y1="84" x2="500" y2="84" />
+                                <line x1="240" y1="104" x2="500" y2="104" />
+                                <line x1="240" y1="124" x2="500" y2="124" />
+                                <line x1="240" y1="144" x2="500" y2="144" />
+                            </g>
+                            <g font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#FFFFFF"
+                                text-anchor="middle" dominant-baseline="central">
+                                <circle cx="323" cy="104" r="9" fill="#FF8A3D" /><text x="323" y="104">5</text>
+                                <circle cx="415" cy="104" r="9" fill="#FF8A3D" /><text x="415" y="104">7</text>
+                                <circle cx="323" cy="84" r="9" fill="#23B5A4" /><text x="323" y="84">5</text>
+                                <circle cx="369" cy="84" r="9" fill="#23B5A4" /><text x="369" y="84">6</text>
+                            </g>
+                            <g font-family="JetBrains Mono, monospace" font-size="12" fill="#5A5F70">
+                                <text x="10" y="40">notation in</text>
+                                <text x="370" y="172" text-anchor="middle">position V · frets 5–7</text>
+                                <text x="10" y="200">tab out</text>
+                            </g>
+                            <g stroke="#8E92A0" stroke-width="1">
+                                <line x1="10" y1="216" x2="508" y2="216" />
+                                <line x1="10" y1="228" x2="508" y2="228" />
+                                <line x1="10" y1="240" x2="508" y2="240" />
+                                <line x1="10" y1="252" x2="508" y2="252" />
+                                <line x1="10" y1="264" x2="508" y2="264" />
+                                <line x1="10" y1="276" x2="508" y2="276" />
+                            </g>
+                            <g font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" text-anchor="middle"
+                                dominant-baseline="central" paint-order="stroke" stroke="#FFFFFF" stroke-width="7">
+                                <text x="140" y="252" fill="#FF8A3D">5</text>
+                                <text x="240" y="252" fill="#FF8A3D">7</text>
+                                <text x="340" y="240" fill="#23B5A4">5</text>
+                                <text x="440" y="240" fill="#23B5A4">6</text>
+                            </g>
+                        </svg>
+                    </div>
+                </article>
+
+                <article class="ds-panel ds-panel--flip">
+                    <div class="ds-mark">Export &amp; share</div>
+                    <h2 class="ds-h2">Send it as a file, or print it.</h2>
+                    <p class="ds-lead">
+                        Share a song as a Guitar Pro file, as a clean A4 PDF with title, tempo, tuning, notation over tab and
+                        page numbers (the full score with every track, or one track), or as MIDI with every track for Logic.
+                        Export from inside the song or straight from the library.
+                        The exported file keeps your chord names, each track's sounds, and DuoScore's exact drum velocities
+                        and timing.
+                    </p>
+                    <div class="ds-panel__art">
+                        <div class="ds-pages" aria-hidden="true">
+                            <div class="ds-a4 ds-a4--back">
+                                <div class="ds-a4__system" style="margin-top:1rem"></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__page">2 / 2</div>
+                            </div>
+                            <div class="ds-a4">
+                                <div class="ds-a4__title">Midnight Etude</div>
+                                <div class="ds-a4__meta"><span>♩ = 96</span><span>E A D G B E</span></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__system"></div>
+                                <div class="ds-a4__page">1 / 2</div>
+                            </div>
+                        </div>
+                        <div class="ds-exports">
+                            <span class="ds-chip">Guitar Pro file</span>
+                            <span class="ds-chip">A4 PDF</span>
+                            <span class="ds-chip">Full score or one track</span>
+                            <span class="ds-chip">MIDI for Logic</span>
+                            <span class="ds-chip">Keeps chords, sounds &amp; drum feel</span>
+                            <span class="ds-chip">From the song</span>
+                            <span class="ds-chip">From the library</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Made for your device -->
+        <section class="ds-section ds-deep" id="devices">
+            <div class="ds-wrap">
+                <div class="ds-center">
+                    <div class="ds-mark">Made for your device</div>
+                    <h2 class="ds-h2">One app. <span class="ds-grad">At home on every screen.</span></h2>
+                    <p class="ds-lead">
+                        DuoScore launches on iPhone, iPad and iPhone Duo at the same time, each with a layout designed for it,
+                        not stretched to fit it.
+                    </p>
+                </div>
+
+                <div class="ds-devices">
+                    <article class="ds-devcard">
+                        <span class="ds-devcard__tag">Launching</span>
+                        <div class="ds-device">
+                            <div class="ds-shot" style="--ratio: 1.4">
+                                <picture>
+                                    <img src="screens/web/splitview-1600.jpg" srcset="screens/web/splitview-800.jpg 800w, screens/web/splitview-1600.jpg 1600w" sizes="(min-width: 900px) 650px, 100vw"
+                                        width="1600" height="1125" alt="DuoScore on iPhone Duo" loading="lazy" decoding="async"
+                                        onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                                </picture>
+                                <div class="ds-shot__empty" role="img" aria-label="DuoScore on iPhone Duo">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                        <path d="M12 4v16" />
+                                        <circle cx="7.5" cy="9" r="1.5" />
+                                        <path d="M3 17l4.5-4 3 2.5" />
+                                    </svg>
+                                    <span class="ds-shot__label">iPhone Duo</span>
+                                    <code class="ds-shot__path">screens/splitview.png</code>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="ds-h3">iPhone Duo</h3>
+                        <ul class="ds-ticks">
+                            <li>The whole score across the unfolded screen</li>
+                            <li>Practice and editing tools in side panels, beside the music</li>
+                            <li>Split View with a lesson or a recording next to the song</li>
+                            <li>Folded, the outer screen writes and plays, held in portrait</li>
+                            <li>Pauses when you fold or unfold, and stays awake while you play</li>
+                        </ul>
+                    </article>
+                    <article class="ds-devcard">
+                        <span class="ds-devcard__tag">Launching</span>
+                        <div class="ds-device">
+                            <div class="ds-shot" style="--ratio: 1.4">
+                                <picture>
+                                    <img src="screens/web/ipad-1600.jpg" srcset="screens/web/ipad-800.jpg 800w, screens/web/ipad-1600.jpg 1600w" sizes="(min-width: 900px) 650px, 100vw"
+                                        width="1600" height="1103" alt="DuoScore on iPad" loading="lazy" decoding="async"
+                                        onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                                </picture>
+                                <div class="ds-shot__empty" role="img" aria-label="DuoScore on iPad">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="16" rx="2.5" />
+                                        <path d="M12 4v16" />
+                                        <circle cx="7.5" cy="9" r="1.5" />
+                                        <path d="M3 17l4.5-4 3 2.5" />
+                                    </svg>
+                                    <span class="ds-shot__label">iPad</span>
+                                    <code class="ds-shot__path">screens/ipad.png</code>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="ds-h3">iPad</h3>
+                        <ul class="ds-ticks">
+                            <li>A roomy canvas for scores, tab and drums</li>
+                            <li>Side panels that open beside the music, not over it</li>
+                            <li>Split View, so your lesson or recording stays in reach</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="ds-devcard ds-devcard--phone">
+                    <div class="ds-device ds-device--phone">
+                        <div class="ds-shot" style="--ratio: 0.46">
+                            <picture>
+                                <img src="screens/web/iphone-800.jpg" srcset="screens/web/iphone-400.jpg 400w, screens/web/iphone-800.jpg 800w" sizes="16rem"
+                                    width="800" height="1739" alt="DuoScore on iPhone, held upright" loading="lazy" decoding="async"
+                                    onerror="this.closest('.ds-shot').classList.add('is-empty')">
+                            </picture>
+                            <div class="ds-shot__empty" role="img" aria-label="DuoScore on iPhone">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
+                                    <circle cx="10" cy="8" r="1.3" />
+                                    <path d="M6 17l3.5-3 2.5 2" />
+                                </svg>
+                                <span class="ds-shot__label">iPhone</span>
+                                <code class="ds-shot__path">screens/iphone.png</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="ds-devcard__tag">Launching</span>
+                        <h3 class="ds-h3">iPhone</h3>
+                        <ul class="ds-ticks">
+                            <li>Held upright, the fret pad and the palette sit under your thumb, the score above them</li>
+                            <li>Turned sideways, the score gets the width and the tools move beside it</li>
+                            <li>Play floats over the score, so nothing hides under it</li>
+                            <li>Tracks, the mixer and the song's details are one tap away</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Final call to action -->
+        <section class="ds-section ds-light ds-final">
+            <div class="ds-wrap">
+                <div class="ds-final__logo">
+                    <img src="img/wordmark.jpg?v=6" width="1400" height="572"
+                        alt="DuoScore" loading="lazy">
+                </div>
+                <h2 class="ds-h2">Pick up your guitar.<br>Start the song.</h2>
+                <p class="ds-lead">
+                    DuoScore is coming to iPhone, iPad and iPhone Duo. Free for 7 days, then €9.99 once.
+                </p>
+                <div class="ds-cta">
+                    <span class="ds-store" aria-label="Coming soon to the App Store">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                            <path d="M12 5v14" />
+                        </svg>
+                        <span><small>Coming soon</small>to the App Store</span>
+                    </span>
+                    <a class="ds-store ds-store--ghost" href="videos/">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M10 8.5l5 3.5-5 3.5z" />
+                        </svg>
+                        <span><small>Watch</small>the videos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="ds-footer">
+        <div class="ds-wrap ds-footer__inner">
+            <div>
+                <a class="ds-brand" href="#top">
+                    <img src="img/logo-nav.png?v=5" alt="" width="34" height="34">
+                    <span><b>Duo</b>Score</span>
+                </a>
+                <a class="ds-footer__fine" href="legal/">Legal Notice</a>
+            </div>
+            <div class="ds-footer__contact">
+                <a href="videos/">Videos</a>
+                <a href="support/">Support</a>
+                <a href="privacy/">Privacy</a>
+                <a href="terms/">Terms of Use</a>
+                <a href="https://www.instagram.com/duoscore.app">Instagram</a>
+                <a href="mailto:support@duoscore.app">support@duoscore.app</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=10" defer></script>
+    <script type="module" src="fold/fold.js?v=7"></script>
+</body>
+
+</html>
